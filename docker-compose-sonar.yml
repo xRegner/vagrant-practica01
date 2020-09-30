@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+
+  sonar:
+    image: sonarqube
+    restart: always
+    ports:
+      - "80:9000"
+    volumes:
+       - /mnt/sonar:/opt/sonarqube/extensions
+       - /mnt/sonar:/opt/sonarqube/conf
+       - /mnt/sonar:/opt/sonarqube/logs
+       - /mnt/sonar:/opt/sonarqube/data
